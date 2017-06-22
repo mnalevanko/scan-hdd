@@ -13,7 +13,7 @@ def Scan(directory=None):
         directory = os.getcwd()
 
         if path.splitdrive(directory)[0]:
-            directory = path.splitdrive(directory)[]
+            directory = path.splitdrive(directory)[0]
         else:
             directory = '/'
 
