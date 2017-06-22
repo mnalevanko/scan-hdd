@@ -16,3 +16,5 @@ def Scan(directory=None):
             directory = path.splitdrive(directory)[]
         else:
             directory = '/'
+
+    return os.walk(directory)
