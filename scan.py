@@ -7,14 +7,16 @@ def Scan(directory=None):
     :return: a list
     """
 
-    if directory:
-        directory = os.path.splitdrive(os.path.expanduser(directory))
-    else:
+    if not directory:
         directory = os.getcwd()
-
+    else:
+        directory = os.path.abspath(os.path.expanduser(directory))
         if os.path.splitdrive(directory)[0]:
             directory = os.path.splitdrive(directory)[0]
         else:
             directory = '/'
 
     return os.walk(directory)
+
+for _ in Scan('/home/gg/'):
+    print(_)
