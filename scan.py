@@ -17,6 +17,3 @@ def Scan(directory=None):
             directory = '/'
 
     return os.walk(directory)
-
-for _ in Scan('/home/gg/'):
-    print(_)
