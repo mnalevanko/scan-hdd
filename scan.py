@@ -1,4 +1,4 @@
-from os import path, getcwd
+import os
 
 def Scan(directory=None):
     """
@@ -8,12 +8,12 @@ def Scan(directory=None):
     """
 
     if directory:
-        directory = path.splitdrive(path.expanduser(directory))
+        directory = os.path.splitdrive(os.path.expanduser(directory))
     else:
         directory = os.getcwd()
 
-        if path.splitdrive(directory)[0]:
-            directory = path.splitdrive(directory)[0]
+        if os.path.splitdrive(directory)[0]:
+            directory = os.path.splitdrive(directory)[0]
         else:
             directory = '/'
 
